@@ -1,0 +1,57 @@
+/* style.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #D4E0F7;
+}
+
+header {
+    padding: 146px 0 90px;
+    background-color: #011627;
+}
+
+section {
+    padding: 100px 0;
+}
+
+#log-title {
+    text-align: center;
+    font-style: bold;
+}
+
+.nav-bar {
+    margin-bottom: 0%;
+}
+
+.log {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;   
+    background-color: #ffffff; /* MAASTRICHT BLUE */
+    /*box-shadow: 4px 8px  #210934; */
+}
+
+.log input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.register {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    
+}
+
+.register input {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.register input {
+    font-family: Arial, Helvetica, sans-serif;
+}

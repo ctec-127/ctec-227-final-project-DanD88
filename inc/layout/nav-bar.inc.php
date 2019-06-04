@@ -24,6 +24,9 @@
         <li class="nav-item">
             <a class="nav-link" href="inventory.php">Inventory</a>
         </li>
+        <li class="nav-item">
+            <a href="inventory_home.php" class="nav-link">Admin Inventory</a>
+        </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

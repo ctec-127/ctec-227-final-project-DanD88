@@ -1,8 +1,25 @@
-<?php ?>
+
+<div>
+
+<?php
+if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"){
+    $isAdmin = "(Administrator)";
+    $user_role = '|&nbsp;&nbsp;<a href="admin.php" title="Administrator">Admin</a>';
+} else {
+    $user_role = "";
+    $isAdmin = "(User)";
+}
+
+if(isset($_SESSION['firstname'])){
+    echo '<div class="userheader"><i class="fa fa-user-circle-o fa-5 icon"></i>&nbsp;<a href="profile.php?id=' . $_SESSION['id'] . '" class="profilelink" title="Profile">' . $_SESSION['firstname'] . ' ' . $_SESSION['lastname'] . "</a> $isAdmin</div>";
+}
+?>
+
+</div>
 
 <div class="nav-bar">
         <nav>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand disabled" href="http://">Final Project</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,20 +41,18 @@
         <li class="nav-item">
             <a class="nav-link" href="inventory.php">Inventory</a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a href="inventory_home.php" class="nav-link">Admin Inventory</a>
-        </li>
+        </li>-->
+        <?php echo $user_role ?>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+       
     </div>
     </nav>
-    </nav>
+    </nav> -->
 
-    <header class="text-white">
-        <div class="container text-center">
-            <h1>Home Brew Supply Store</h1>           
+    <header>
+        <div class="container">
+            <h1 class="title text-center display-1">Home Brew Supply Store</h1>           
         </div>
     </header>

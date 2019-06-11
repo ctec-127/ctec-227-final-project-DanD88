@@ -43,6 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $prodName = $db->real_escape_string(strip_tags($_POST['prodName']));
     }
 
+    // something goes here to increase count of onhand
+
     if (empty($_POST['OnHand'])) {
         array_push($error_bucket, "<p>Please put in the item quantity.</p>");
     } else {

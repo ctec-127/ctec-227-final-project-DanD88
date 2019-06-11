@@ -9,17 +9,6 @@ try {
     $error = $e->getMessage();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Inventory</title>
-</head>
 
 <?php
 require 'inc/layout/header.inc.php';
@@ -27,7 +16,8 @@ require 'inc/layout/header.inc.php';
 
 <body>
     <div class="container my-5">
-        <h2 class="center">Inventory Page:</h2>
+        <label class="form-label" for="table"><h2>Inventory Page:</h2></label>
+        <input class="border-rounded search" type="text" placeholder="Search:">
     </div>
 
     <div class="container">
@@ -46,14 +36,14 @@ require 'inc/layout/header.inc.php';
             ?>
 
             <table class="table">
-                <thead class="thead-dark">
+                <thead id="user_data" class="thead-dark">
                     <tr>
-                        <th scope="row">Item Num</th>
-                        <th scope="row">Description</th>
-                        <th scope="row">On Hand</th>
-                        <th scope="row">Category</th>
-                        <th scope="row">Price</th>
-                        <th scope="row">Image</th>
+                        <th>Item Num</th>
+                        <th>Description</th>
+                        <th>On Hand</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Image</th>
                     </tr>
 
                     <?php

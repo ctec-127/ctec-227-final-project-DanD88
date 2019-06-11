@@ -8,12 +8,27 @@ body {
 }
 
 header {
-    padding: 146px 0 90px;
+	padding: 146px 0 90px;
+	background-image: url("../img/kegs.jpg");
     background-color: #011627;
 } 
 
+.title {
+	color: #35A7FF;
+	font-size: 60px;
+	padding: 40px;
+	background-color: #011627;
+	opacity: 0.9;
+	font-weight: 600;
+	font-family: 'Bitter', serif;
+}
+
 section {
     padding: 100px 0;
+}
+
+.front {
+	background-color: #810e05;
 }
 
 #log-title {
@@ -22,12 +37,24 @@ section {
 }
 
 .nav-bar {
-    margin-bottom: 0%;
+	margin-bottom: 0%;
+	background-color: #181818;
+}
+
+.navbar {
+	background-color: #181818;
+}
+
+.search {
+	float: right;
+	padding: 8px 16px;
+	border: 1.5px solid #011627;
+	border-radius: 2px;
 }
 
 .log {
     width: 400px;
-    margin: 0 auto;
+	margin: 0 auto;
     padding: 30px;   
     background-color: #ffffff; /* MAASTRICHT BLUE */
     /*box-shadow: 4px 8px  #210934; */
@@ -35,6 +62,10 @@ section {
 
 .log input {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon {
+	text-align: center;
 }
 
 .register {
@@ -57,6 +88,14 @@ section {
 }
 
 /* inventory admin */
+
+.admin {
+	margin-left: 8%;
+}
+
+.userheader {
+	
+}
 
 .myButton {
 	-moz-box-shadow: 3px 5px 6px 0px #8a2a21;

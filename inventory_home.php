@@ -5,33 +5,24 @@ try {
     require_once('inc/mysqli_connect.php');
     $sql = "SELECT * FROM inventory";
     $result = $db->query($sql);
+    
 } catch (Exception $e) {
     $error = $e->getMessage();
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Inventory</title>
-</head>
 
 <?php
 require 'inc/layout/header.inc.php';
-
+require_once('inc/functions.inc.php');
 require 'inc/add/content.inc.php';
 
 ?>
 
-
-
 <body>
-    <section>
+    <section class="admin">
+
+    
 
         <button type="button" class="myButton btn btn-info mx-5 btn-lg" data-toggle="modal" data-target="#myModal">Add Items</button>
 
@@ -89,7 +80,27 @@ require 'inc/add/content.inc.php';
 
                 <!-- Modal content-->
                 <div class="modal-content">
-                    
+
+                    <div class="modal-body">
+                        <p>Something to sell. Possibly sell by typing in ItemNum</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="button" class="myButton btn btn-info btn-lg mx-5" data-toggle="modal" data-target="#myModal1">Item History</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
                     <div class="modal-body">
                         <p>Something to sell. Possibly sell by typing in ItemNum</p>
                     </div>
@@ -105,6 +116,9 @@ require 'inc/add/content.inc.php';
 
 
 
+
 </body>
 
-</html>
+<?php
+require 'inc/layout/footer.inc.php';
+?>

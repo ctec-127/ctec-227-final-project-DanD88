@@ -6,3 +6,5 @@
     </div>
     <!-- /.container -->
 </footer>
+
+</html>

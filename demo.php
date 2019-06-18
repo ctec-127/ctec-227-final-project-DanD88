@@ -48,3 +48,33 @@
 
     </div>
    </nav>
+
+   <table id="user_data" class="table table-striped table-bordered">
+                <thead id="data" class="table-dark">
+                    <tr>
+                        <td>Item Num</td>
+                        <td>Description</td>
+                        <td>On Hand</td>
+                        <td>Category</td>
+                        <td>Price</td>
+                        <td>Image</td>
+                    </tr>
+                </thead>
+
+                <?php
+                // loop through all data d
+                while ($row = $result->fetch_assoc()) { ?>
+                    <tr>
+                        <td><?php echo $row['ItemNum']; ?></td>
+                        <td><?php echo $row['prodName']; ?></td>
+                        <td><?php echo $row['OnHand']; ?></td>
+                        <td><?php echo $row['category']; ?></td>
+                        <td><?php echo $row['price']; ?></td>
+                        <td><?php echo $row['ProdImage']; ?></td>
+                    </tr>
+                <?php } ?>
+            </table>
+
+
+            <label for="category">Category</label>
+            <input class="form-control" type="text" name="category" id="category" value="<?php echo (isset($category) ? $category : ''); ?>" required>

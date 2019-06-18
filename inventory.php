@@ -10,17 +10,32 @@ try {
 }
 ?>
 
+<!DOCTYPE html>
+<html>
+
+<!--<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
+</head>-->
+
 <?php
 require 'inc/layout/header.inc.php';
+//include('fetch.php');
 ?>
 
 <body>
     <div class="container my-5">
-        <label class="form-label" for="table"><h2>Inventory Page:</h2></label>
-        <input class="border-rounded search" type="text" placeholder="Search:">
+
+        <h2>Inventory Page:</h2>
+
     </div>
 
-    <div class="container">
+    <div class="container pb-5">
 
         <?php if (isset($error)) {
             echo "<p>$error</p>";
@@ -32,37 +47,16 @@ require 'inc/layout/header.inc.php';
             echo "<p>No rows were found</p>";
         } else {
             echo "<p>Total results found: " . $numrows;
+        }
 
+        display_inventory($result);
+        
             ?>
 
-            <table class="table">
-                <thead id="user_data" class="thead-dark">
-                    <tr>
-                        <th>Item Num</th>
-                        <th>Description</th>
-                        <th>On Hand</th>
-                        <th>Category</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                    </tr>
-
-                    <?php
-                    // loop through all data
-
-                    while ($row = $result->fetch_assoc()) { ?>
-                        <tr>
-                            <td><?php echo $row['ItemNum']; ?></td>
-                            <td><?php echo $row['prodName']; ?></td>
-                            <td><?php echo $row['OnHand']; ?></td>
-                            <td><?php echo $row['category']; ?></td>
-                            <td><?php echo $row['price']; ?></td>
-                            <td><?php echo $row['ProdImage']; ?></td>
-                        </tr>
-                    <?php } ?>
-            </table>
+            
         </div>
     <?php
-}
+
 // close db connection
 $db->close();
 ?>
@@ -72,3 +66,9 @@ $db->close();
 <?php
 require 'inc/layout/footer.inc.php';
 ?>
+
+<script>
+    $(document).ready(function() {
+        $('#user_data').DataTable();
+    });
+</script>

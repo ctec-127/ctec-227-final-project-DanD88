@@ -1,8 +1,7 @@
-// fetch using ajax for search mock code
-
 <?php
+// fetch using ajax for search mock code
 include('inc/mysqli_connect.php');
-include('inc/functions.inc.php');
+//include('inc/functions.inc.php');
 $query = '';
 $output = array();
 $query .= "SELECT * FROM inventory ";

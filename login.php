@@ -78,27 +78,30 @@ if (!$success) { ?>
 	<div class="container my-5">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" autocomplete="off">
 			<div class="log form-group border border-dark rounded">
-				<h2 class="log-title">Log in</h2>
-				<br>
-				<div class="icon">
+				<h1 class="log-title font-weight-bold text-center">Log in</h1>
+			
+				<div class="icon-log">
 					<i class="fas fa-user fa-8x"></i>
 				</div>
 				<hr>
 				<br>
-				<label class="form-label" for="email">Email:</label>
+				<label class="form-label font-weight-bold" for="email">Email:</label>
 				<input class="form-control" type="email" id="email" name="email" size="40" maxlength="60" value="<?php if (isset($_POST["email"])) {
-																														echo $_POST["email"];
-																													} ?>">
+					echo $_POST["email"];} ?>">
 				<br>
-				<label class="form-label" for="password">Password:</label>
+				<label class="form-label font-weight-bold" for="password">Password:</label>
 				<input class="form-control" type="password" id="password" name="password" size="20" maxlength="20" value="<?php if (isset($_POST["password"])) {
 				echo $_POST["password"];
 				} ?>">
 				<br>
 
-				<input class="button1" type="submit" value="Login">
+				<input class="btn btn-primary" type="submit" value="Login">
 				<a class="sign-up mx-4" href="register.php">sign up</a>
 			</div>
 		</form>
 	</div>
 <?php } ?>
+
+<?php
+require_once("inc/layout/footer.inc.php");
+?>

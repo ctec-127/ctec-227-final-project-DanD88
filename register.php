@@ -21,12 +21,12 @@ try {
 
         // $required = array('firstname', 'lastname', 'email', 'password', 'role');
 
-        $error = false;
-        foreach ($required as $field) {
-            if (empty($_POST[$field])) {
-                $error = true;
-            }
-        }
+        // $error = false;
+        // foreach ($required as $field) {
+        //     if (empty($_POST[$field])) {
+        //         $error = true;
+        //     }
+        // }
 
         if ($error) {
             echo '<div class="error">All fields are required.</div>';
